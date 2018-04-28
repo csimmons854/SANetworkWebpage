@@ -16,7 +16,7 @@ export class EditItemComponent implements OnInit {
 
     itemToEdit: Item;
     itemID: string;
-    pageTitle = 'Edit Login';
+    pageTitle = 'Edit Item';
 
     @Output() itemEdited: EventEmitter<any> = new EventEmitter<any>();
 
@@ -62,7 +62,7 @@ export class EditItemComponent implements OnInit {
         this.items.updateItem(updatedItem).subscribe(response => {
             if (response) {
                 this.itemEditedEvent(updatedItem);
-                this.snackBar.open('Login Updated ', '', {
+                this.snackBar.open('Item Updated ', '', {
                     duration: 2000
                 });
             }

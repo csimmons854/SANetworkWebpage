@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 // app
 import { SharedModule } from '../shared';
-import { MenuItemComponent } from './components/menu-item/menu-item.component';
 import { MenuComponent } from './components/menu/menu.component';
 
 export const SHARED_MODULES: any = [
@@ -12,8 +11,7 @@ export const SHARED_MODULES: any = [
     TranslateModule
 ];
 
-export const COMPONENT_DECLARATIONS: any[] = [MenuComponent, MenuItemComponent];
+export const COMPONENT_DECLARATIONS: any[] = [MenuComponent];
 
 export const COMPONENT_EXPORTS: any[] = [MenuComponent];
 
-export * from './interfaces/MenuItem';

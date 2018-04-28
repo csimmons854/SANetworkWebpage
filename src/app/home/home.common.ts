@@ -5,7 +5,6 @@ import { TranslateModule } from '@ngx-translate/core';
 import { SharedModule } from '../shared';
 import { RouterModule } from '../common';
 import { HomeRoutes } from './home.routes';
-import { HomeComponent } from './components/home/home.component';
 
 export const SHARED_MODULES: any[] = [
     SharedModule,
@@ -13,4 +12,3 @@ export const SHARED_MODULES: any[] = [
     TranslateModule.forChild()
 ];
 
-export const COMPONENT_DECLARATIONS: any[] = [HomeComponent];

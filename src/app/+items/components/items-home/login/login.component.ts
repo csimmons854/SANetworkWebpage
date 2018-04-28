@@ -45,7 +45,6 @@ export class LoginComponent implements OnInit {
     }
 
     loggedInEvent(event) {
-        console.log('clicked');
         this.loggedIn.emit(event);
     }
 

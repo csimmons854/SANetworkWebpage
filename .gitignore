@@ -48,3 +48,5 @@ Thumbs.db
 
 # Secrets
 nginx/keys
+docker-compose.yml
+Dockerfile

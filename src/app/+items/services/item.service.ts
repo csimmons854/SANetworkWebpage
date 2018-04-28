@@ -20,7 +20,6 @@ export class ItemService {
     }
 
     getItems(user): Observable<Item[]> {
-        console.log('Getting Items for ' + user);
         const gottenItems = this.http.get<Item[]>('http://sanetworkserver.herokuapp.com/SANetwork/' + user, {
             headers: {
                 'Content-Type': 'application/json',
@@ -28,7 +27,6 @@ export class ItemService {
         });
         if (gottenItems) {
             gottenItems.subscribe(items => {
-                console.log(items);
             });
             return gottenItems;
         } else {
@@ -76,7 +74,6 @@ export class ItemService {
             id: updatedItem.id,
             powerState: updatedItem.powerState
         };
-        console.log(outBound);
         return this.http.put(
             'http://sanetworkserver.herokuapp.com/SANetwork/disable',
             outBound,
@@ -108,7 +105,6 @@ export class ItemService {
         const outBound = {
             id: updatedItem.id
         };
-        console.log(outBound);
         return this.http.put(
             'http://sanetworkserver.herokuapp.com/SANetwork/delete',
             outBound,
@@ -125,7 +121,6 @@ export class ItemService {
             username: newUser.username,
             password: newUser.password
         };
-        console.log(outBound);
         return this.http.put(
             'http://sanetworkserver.herokuapp.com/SANetwork/signup',
             outBound,
@@ -138,12 +133,10 @@ export class ItemService {
     }
 
     login(newUser): Observable<any> {
-        console.log(newUser);
         const outBound = {
             username: newUser.username,
             password: newUser.password
         };
-        console.log(outBound);
         return this.http.put(
             'http://sanetworkserver.herokuapp.com/SANetwork/login',
             outBound,

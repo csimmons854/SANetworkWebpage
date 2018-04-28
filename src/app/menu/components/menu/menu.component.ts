@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 // app
-import { MenuItem } from '../../interfaces/MenuItem';
 
 @Component({
     moduleId: module.id,
@@ -10,7 +9,6 @@ import { MenuItem } from '../../interfaces/MenuItem';
     styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-    @Input() items: MenuItem[];
     currentRoute: string;
 
     constructor(private router: Router) {}

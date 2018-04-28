@@ -61,7 +61,6 @@ export class ItemsHomeComponent implements OnInit {
     }
 
     itemEdited(item) {
-        console.log(item);
         this.selected.name = item.name;
         this.selected.fields = item.fields;
         this.editing = false;
@@ -70,7 +69,6 @@ export class ItemsHomeComponent implements OnInit {
     userLoggedIn(user) {
         this.snackBar.open('Logging in...', '', {});
         this.items.login(user).subscribe(results => {
-            console.log(results);
             if (results.code === 0) {
                 this.user = user.username;
                 this.items.getItems(this.user).subscribe(items => {
@@ -92,7 +90,6 @@ export class ItemsHomeComponent implements OnInit {
         });
         console.log(user);
         this.items.signUp(user).subscribe(results => {
-            console.log(results);
            if (results.success) {
                this.user = user.username;
                this.items.getItems(this.user).subscribe(items => {
@@ -118,7 +115,6 @@ export class ItemsHomeComponent implements OnInit {
     }
 
     submit() {
-        console.log(this.createForm.value);
         this.items.registerKey(this.user, this.createForm.value.key).subscribe(response =>{
             if (response.success) {
                 this.snackBar.open('Device Registered', '', {

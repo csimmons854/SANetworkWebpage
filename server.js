@@ -18,7 +18,7 @@ const forceSSL = function() {
         }
         next();
     }
-}
+};
 
 app.use(forceSSL());
 app.listen(process.env.PORT || 8080);

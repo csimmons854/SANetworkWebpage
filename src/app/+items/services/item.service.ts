@@ -20,7 +20,7 @@ export class ItemService {
     }
 
     getItems(user): Observable<Item[]> {
-        const gottenItems = this.http.get<Item[]>('http://sanetworkserver.herokuapp.com/SANetwork/' + user, {
+        const gottenItems = this.http.get<Item[]>('/SANetwork/' + user, {
             headers: {
                 'Content-Type': 'application/json',
             }
@@ -59,7 +59,7 @@ export class ItemService {
             fields: updatedItem.fields
         };
         return this.http.put(
-            'http://sanetworkserver.herokuapp.com/SANetwork',
+            '/SANetwork',
             outBound,
             {
                 headers: {
@@ -75,7 +75,7 @@ export class ItemService {
             powerState: updatedItem.powerState
         };
         return this.http.put(
-            'http://sanetworkserver.herokuapp.com/SANetwork/disable',
+            '/SANetwork/disable',
             outBound,
             {
                 headers: {
@@ -106,7 +106,7 @@ export class ItemService {
             id: updatedItem.id
         };
         return this.http.put(
-            'http://sanetworkserver.herokuapp.com/SANetwork/delete',
+            '/SANetwork/delete',
             outBound,
             {
                 headers: {
@@ -122,7 +122,7 @@ export class ItemService {
             password: newUser.password
         };
         return this.http.put(
-            'http://sanetworkserver.herokuapp.com/SANetwork/signup',
+            '/SANetwork/signup',
             outBound,
             {
                 headers: {
@@ -138,7 +138,7 @@ export class ItemService {
             password: newUser.password
         };
         return this.http.put(
-            'http://sanetworkserver.herokuapp.com/SANetwork/login',
+            '/SANetwork/login',
             outBound,
             {
                 headers: {
@@ -154,7 +154,7 @@ export class ItemService {
             key: productKey
         };
         return this.http.put(
-            'http://sanetworkserver.herokuapp.com/SANetwork/registerKey',
+            '/SANetwork/registerKey',
             outBound,
             {
                 headers: {

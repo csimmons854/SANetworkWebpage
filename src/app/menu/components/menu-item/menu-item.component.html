@@ -1,0 +1,11 @@
+<div class="menu-item-container" [routerLink]="item.link" [routerLinkActive]="'active'">
+
+    <mat-icon class="nav-icon">{{ item.icon }}</mat-icon>
+
+    <span 
+        class="nav-label"
+        *ngIf="item"
+        [innerText]="item.title | translate">
+    </span>
+
+</div>

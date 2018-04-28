@@ -1,0 +1,32 @@
+.menu-item-container {
+   display: flex; 
+   align-items: center;
+   padding-left: 16px;
+   padding-right: 16px;
+   height: 43px;
+}
+
+.menu-item-container:focus {
+    outline: 0;
+}
+
+.menu-item-container:hover {
+    cursor: pointer;
+}
+
+.nav-icon {
+    color: white;
+    opacity: 0.7;
+}
+
+.nav-label {
+    color: white;
+    opacity: 0.7;
+    font-size: 14px;
+    margin-left: 16px;
+}
+
+.active .nav-label, 
+.active .nav-icon {
+    opacity: 0.9;
+}

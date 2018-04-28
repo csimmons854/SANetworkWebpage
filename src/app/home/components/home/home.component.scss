@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.col-1 {
+    width: 20%;
+}
+
+.col-2 {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.number-card-text {
+    font-size: 12px !important;
+}
+
+.chart-title {
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.full-chart-container, .half-chart-container {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.full-chart-container {
+    width: 100%;
+}
+
+.half-chart-container {
+    width: 50%;
+}

@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>Create an Appointment</h1>
+<div mat-dialog-content>
+	<mat-form-field>
+    <input matInput placeholder="Customer Name" [(ngModel)]="data.name">
+	</mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Choose a Date" [matDatepicker]="picker">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select placeholder="Choose a Time">
+      <mat-option *ngFor="let time of times" [value]="time.value">
+        {{ time.viewValue }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Items" [(ngModel)]="data.items">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close] cdkFocusInitial>Add</button>
+</div>

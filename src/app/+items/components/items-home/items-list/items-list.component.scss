@@ -1,0 +1,51 @@
+.item-list-item {
+
+    height: 72px !important;
+    display: flex;
+
+    h3, h4 {
+        font-weight: 400;
+    }
+
+    .item-name-number {
+        display: flex;
+        flex-direction: column;
+
+        .item-name {
+            font-size: 16px;
+        }
+
+    }
+
+    .edit-btn {
+        margin-left: 12px;
+        margin-right: 10px;
+        color: #FFFFFF;
+        background-color: #2196F3;
+    }
+
+    .Enable-btn{
+        background-color: #5AAE50;
+    }
+}
+
+::ng-deep .mat-selection-list {
+    padding-top: 0px !important;
+}
+
+::ng-deep .mat-divider {
+    border-top-width: 2px !important;
+}
+
+::ng-deep .mat-pseudo-checkbox {
+    display: none !important;
+}
+
+::ng-deep .mat-list-text {
+    flex-direction: row !important;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+

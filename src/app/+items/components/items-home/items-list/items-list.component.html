@@ -1,0 +1,38 @@
+<mat-selection-list (selectionChange)="itemSelected($event)">
+    <mat-divider></mat-divider>
+    <ng-container *ngFor="let item of items; let i = index">
+        <mat-list-option class="item-list-item" [value]="i">
+            <span mat-line class="item-name-number">
+                <span class="item-name">{{ item.name }}</span>
+            </span>
+            <span class="spacer"></span>
+            <ng-container *ngIf="i == selectedNdx">
+                <button
+                    mat-raised-button
+                    color="primary"
+                    (click)="editItemClick(i)"
+                    class="edit-btn">Edit Item
+                </button>
+                <button *ngIf="item.powerState"
+                    mat-raised-button
+                    color="primary"
+                    (click)="togglePause(i)"
+                    class="Disable-btn">Disable
+                </button>
+                <button *ngIf="!item.powerState"
+                        mat-raised-button
+                        color="primary"
+                        (click)="togglePause(i)"
+                        class="Enable-btn">Enable
+                </button>
+                <button
+                    mat-raised-button
+                    color="primary"
+                    (click)="delete(i)"
+                    class="edit-btn">Delete Item
+                </button>
+            </ng-container>
+        </mat-list-option>
+        <mat-divider></mat-divider>
+    </ng-container>
+</mat-selection-list>

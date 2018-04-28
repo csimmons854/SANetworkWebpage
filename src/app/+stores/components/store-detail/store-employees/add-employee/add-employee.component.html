@@ -1,0 +1,52 @@
+<div class="container">
+ 
+
+  <mat-card class="app-add-employee">
+    <h3> {{pageTitle}} to {{storeToEdit.name}}</h3>
+  
+    <mat-card-content>
+
+        <form [formGroup]="form">
+           
+          <!-- Employee First Name -->
+          <mat-form-field class="form-field">
+            <input matInput placeholder="First Name" formControlName="firstname">
+          </mat-form-field>
+
+          <!-- Employee Last Name -->
+          <mat-form-field class="form-field">
+            <input matInput placeholder="Last Name" formControlName="lastname">
+          </mat-form-field>
+
+          <!-- Employee Username -->
+          <mat-form-field class="form-field">
+            <input matInput placeholder="Username" formControlName="username">
+          </mat-form-field>
+
+          <!-- Employee Password -->
+          <mat-form-field class="form-field">
+            <input matInput placeholder="Password" formControlName="password">
+          </mat-form-field>
+
+          <!-- Employee Email -->
+          <mat-form-field class="form-field">
+            <input matInput placeholder="Email" formControlName="email">
+          </mat-form-field>
+    
+        </form>
+    </mat-card-content>
+  
+    <mat-card-actions align="end">
+        <!-- Submit Button -->
+        <button 
+            mat-raised-button 
+            [disabled]="!form.valid"
+            color="primary" 
+            (click)="submitted()">Submit
+        </button>
+        </mat-card-actions>
+
+  </mat-card>
+
+
+</div>

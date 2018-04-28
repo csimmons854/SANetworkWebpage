@@ -1,0 +1,38 @@
+<div class="login">
+    <form [formGroup] = "form">
+        <h3>
+            <mat-form-field class="form-field">
+                <input matInput placeholder="Device Name" formControlName="name">
+            </mat-form-field>
+            <div formArrayName="fields">
+                    <ng-container *ngFor="let fieldName of item.fields; let j = index">
+                         <div [formGroupName]="j">
+                             <div *ngIf="!fieldName.hasOptions">
+                                <mat-form-field class="form-field">
+                                    <input matInput placeholder={{fieldName.name}} formControlName="value">
+                                </mat-form-field>
+                             </div>
+                             <div *ngIf="fieldName.hasOptions">
+                                 <mat-form-field>
+                                     <mat-select formControlName="value" placeholder={{fieldName.name}}>
+                                         <mat-option *ngFor="let option of fieldName.options" value = {{option}}>
+                                             {{option}}
+                                         </mat-option>
+                                     </mat-select>
+                                 </mat-form-field>
+                             </div>
+                        </div>
+                    </ng-container>
+            </div>
+        </h3>
+    </form>
+    <!-- Submit Button -->
+    <mat-card-actions>
+        <button class = "submit-btn"
+                mat-raised-button
+                [disabled]="!form.valid"
+                color="primary"
+                (click)="submit()">Submit
+        </button>
+    </mat-card-actions>
+</div>

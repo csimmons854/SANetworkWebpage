@@ -1,0 +1,55 @@
+.title {
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+}
+
+.add-employee-btn-wrapper {
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #C6C6C6;
+    padding: 6px;
+    padding-left: 12px;
+    border-radius: 26px;
+    width: 150px;
+    height: 30px;
+}
+
+.add-employee-btn {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(212, 12, 12);
+}
+
+.add-employee-btn {
+    margin-left: 8px;
+
+    .mat-icon {
+        padding: 4px 0;
+        line-height: 2px;
+    }
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.filter-head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.result-count {
+    margin-left: 20px;
+}
+
+.search-form-field {
+    width: 400px;
+    margin-left: 20px;
+}

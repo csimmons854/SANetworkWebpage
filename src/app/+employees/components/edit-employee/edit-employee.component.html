@@ -1,0 +1,36 @@
+<div class="container">
+
+  <app-employee-form [employee]="employeeToEdit" [pageTitle]="pageTitle" (submit)="submit($event)">
+  </app-employee-form>
+
+
+  <div class="container">
+  <mat-card class="transfer-store">
+    <mat-card-content>
+      <form>
+
+        <!-- Current Store -->
+        <h3>Current Store: {{currentStore.name}}</h3>
+
+        <!-- Select Store (For Transfer) -->
+        <mat-form-field>
+            <mat-select placeholder="Destination Store" [(ngModel)]="selectedValue" name="store">
+            <mat-option *ngFor="let store of otherStores" [value]="store">
+              {{ store.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        
+        <button 
+          mat-button 
+          color="primary" 
+          (click)="transferEmployeeClick(selectedValue)"
+          class="transfer-btn">Transfer
+        </button>
+
+      </form>
+    </mat-card-content>
+  </mat-card>
+  </div> 
+
+</div>

@@ -1,0 +1,26 @@
+<mat-card class="select-store">
+    <mat-card-content>
+      <form>
+
+        <!-- Current Store -->
+        <h3>Which store would you like to add an employee to?</h3>
+
+        <!-- Select Store (For Transfer) -->
+        <mat-form-field>
+            <mat-select placeholder="Destination Store" [(ngModel)]="selectedValue" name="store">
+            <mat-option *ngFor="let store of storeList" [value]="store">
+              {{ store.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        
+        <button 
+          mat-button 
+          color="primary" 
+          (click)="addEmployeeClick(selectedValue)"
+          class="add-btn">Add
+        </button>
+
+      </form>
+    </mat-card-content>
+  </mat-card>

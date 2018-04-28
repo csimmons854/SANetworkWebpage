@@ -1,0 +1,66 @@
+<div class="page-container" *ngIf="loggedIn">
+    <div class="filter-head">
+
+
+        <div class="result-count">
+            {{ itemList.length }} Smart Appliances Found
+
+        </div>
+    </div>
+    <div class="page-content">
+        <div class="items-list">
+
+            <app-items-list
+                [items]="itemList"
+                [selectedNdx]="selectedNdx"
+                (editItem)="editItems($event)"
+                (selectionChange)="itemSelected($event)"
+                (itemDeleted)="deleteItem($event)"
+                (toggleDevice)="togglePause($event)">
+            </app-items-list>
+
+        </div>
+        <div class="items-details">
+            <mat-card>
+                <h4>
+                    User: {{user}}
+                </h4>
+                <!--<ng-container>-->
+                    <!--<div class="create-item-btn-wrapper">-->
+                        <!--Register Appliance-->
+                        <!--<button-->
+                            <!--mat-mini-fab-->
+                            <!--class="create-item-btn"-->
+                            <!--(click)="createItemClick($event)">-->
+                            <!--<mat-icon>add</mat-icon>-->
+                        <!--</button>-->
+                    <!--</div>-->
+                <!--</ng-container>-->
+                <form [formGroup] = "createForm">
+                    <div>
+                    Register Smart Appliance
+                    </div>
+                    <mat-form-field>
+                        <input matInput placeholder="Enter Product Key" formControlName="key"
+                        (keyup.enter)="submit()">
+                    </mat-form-field>
+                </form>
+
+
+                <app-selected-item-details [item]="selected" *ngIf="!editing">
+                </app-selected-item-details>
+
+                <app-edit-item [item] = "selected" *ngIf="editing"
+                               (itemEdited)="itemEdited($event)">
+                </app-edit-item>
+            </mat-card>
+        </div>
+    </div>
+</div>
+
+<div class="page-container" *ngIf="!loggedIn">
+    <app-login-item
+        (loggedIn)="userLoggedIn($event)"u
+        (signedUp)="signedUp($event)">
+    </app-login-item>
+</div>

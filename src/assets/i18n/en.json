@@ -1,0 +1,22 @@
+{
+    "menu": {
+        "title": "GameStop Admin",
+        "home": "Summary",
+        "stores": "Stores"
+    },
+    "home": {
+        "title": "Summary",
+        "description": "This component is where there will be various charts and metrics"
+    },
+    "stores": {
+        "title": "Stores",
+        "description": "This component was rendered from a lazy-loaded module."
+    },
+    "employees": {
+        "title": "Employees",
+        "description": "This component was rendered from a lazy-loaded module."
+    },
+    "phone": {
+        "edition": "Phone Edition!"
+    }
+}

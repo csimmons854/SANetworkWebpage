@@ -1,0 +1,29 @@
+<div class="content-container">
+
+    <div class="side-bar">
+
+        <!-- Application Title -->
+        <span class="title">
+            Smart Appliance Network
+        </span>
+
+        <ng-container *ngIf="user">
+            <!-- Navbar Items -->
+            <app-menu-item
+                *ngFor="let item of items"
+                [item]="item">
+            </app-menu-item>
+        </ng-container>
+
+    </div>
+
+    <div class="content">
+
+        <mat-toolbar color="primary"></mat-toolbar>
+
+        <!-- content outlet -->
+        <ng-content></ng-content>
+
+    </div>
+
+</div>

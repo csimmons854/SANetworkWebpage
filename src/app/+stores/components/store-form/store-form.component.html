@@ -1,0 +1,43 @@
+<div class="container">
+
+        <mat-card class="store-form">
+                <h3> {{pageTitle}}: {{store.name}} </h3>
+
+                <mat-card-content>
+
+                    <form [formGroup]="form">
+                        <!-- Store Name -->
+                        <mat-form-field class="form-field">
+                            <input matInput placeholder="Store Name" formControlName="name">
+                        </mat-form-field>
+                
+                        <!-- Store Address -->
+                        <mat-form-field class="form-field">
+                            <input matInput placeholder="Address" formControlName="address">
+                        </mat-form-field>
+
+                        <!-- Store Phone -->
+                        <input class="area" formControlName="phone_area" size="3">
+                        <span>&ndash;</span>
+                        <input class="exchange" formControlName="phone_exchange" size="3">
+                        <span>&ndash;</span>
+                        <input class="subscriber" formControlName="phone_subscriber" size="4">    
+
+                    </form>
+                </mat-card-content>
+            
+                <mat-card-actions align="end">
+                <!-- Submit Button -->
+                <button 
+                    mat-raised-button 
+                    [disabled]="!form.valid"
+                    color="primary" 
+                    (click)="submitted()">Submit
+                </button>
+                </mat-card-actions>
+            
+        </mat-card>
+</div>
+
+
+

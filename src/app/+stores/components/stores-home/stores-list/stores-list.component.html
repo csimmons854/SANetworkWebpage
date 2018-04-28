@@ -1,0 +1,21 @@
+<mat-selection-list (selectionChange)="storeSelected($event)">
+    <mat-divider></mat-divider>
+    <ng-container *ngFor="let store of stores; let i = index">
+        <mat-list-option class="store-list-item" [value]="i">
+            <span mat-line class="store-name-number">
+                <span class="store-name">{{ store.name }}</span>
+                <span class="store-address">{{ store.address }}</span>
+            </span>
+            <span class="spacer"></span>
+            <ng-container *ngIf="i == selectedNdx">
+                <button
+                    mat-button
+                    color="primary"
+                    (click)="viewStoreClick(i)"
+                    class="view-btn">View Store
+                </button>
+            </ng-container>
+        </mat-list-option>
+        <mat-divider></mat-divider>
+    </ng-container>
+</mat-selection-list>

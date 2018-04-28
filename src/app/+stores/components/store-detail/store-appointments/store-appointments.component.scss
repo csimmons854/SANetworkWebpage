@@ -1,0 +1,64 @@
+@import '../../../../../../node_modules/angular-calendar/css/angular-calendar.css';
+
+.title {
+	text-align: center;
+}
+
+.toolbar {
+	background: #FFFFFF;
+}
+
+.header-spacer {
+	flex: 1 1 auto;
+}
+
+.create-appointment-btn-wrapper {
+	margin-right: 40px;
+	display: flex;
+	align-items: center;
+	font-size: 16px;
+	font-weight: 400;
+	background-color: #C6C6C6;
+	padding: 6px;
+	padding-left: 12px;
+	border-radius: 26px;
+}
+
+.create-appointment-btn {
+	margin-left: 8px;
+
+	.mat-icon {
+		padding: 4px 0;
+		line-height: 8px;
+	}
+}
+
+.create-appointment-btn {
+	width: 30px;
+	height: 30px;
+	background-color: #5AAE50;
+}
+
+.mat-button {
+	background: #C6C6C6;
+}
+
+.btn-group button {
+	border: 1px black;
+	float: left;
+}
+
+.btn-group:after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.btn-group button:not(:last-child) {
+	border-right: none;
+}
+
+.btn-outline-secondary {
+	color: #FFFFFF;
+	background: #424242;
+}

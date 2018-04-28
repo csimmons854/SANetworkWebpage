@@ -1,0 +1,30 @@
+<mat-selection-list (selectionChange)="employeeSelected($event)">
+  <mat-divider></mat-divider>
+  <ng-container *ngFor="let employee of employeeList; let i = index">
+    <mat-list-option class="store-employee-list-item" [value]="i">
+            <span mat-line class="employee-info">
+                <span class="employee-name">{{ employee.firstname }} {{ employee.lastname}}</span>
+                <span class="employee-username"> Username: {{ employee.username }} </span>    
+                <span class="employee-email"> Email: {{ employee.email }} </span>
+            </span>
+
+            <div class="spacer"></div>
+            
+            <button 
+                mat-button 
+                color="primary" 
+                (click)="editEmployeeClick(i)"
+                class="edit-btn">Edit
+            </button>
+            <button 
+                mat-button 
+                color="primary" 
+                (click)="deleteEmployeeClick(i)"
+                class="delete-btn">Delete
+            </button>
+                   
+      </mat-list-option>
+        
+      <mat-divider></mat-divider>
+  </ng-container>
+</mat-selection-list>

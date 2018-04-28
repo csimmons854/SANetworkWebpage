@@ -1,0 +1,11 @@
+<div class="selected-item-details" *ngIf="item">
+    Device Details:
+    <h3>ID: {{item.id}}</h3>
+    <h3 class="item-pause" *ngIf="item.powerState">Power Status: On</h3>
+    <h3 class="item-pause" *ngIf="!item.powerState">Power Status: Off</h3>
+    <h3 class="item-fields">
+        <ng-container *ngFor="let field of item.fields;">
+            <h3 class = "item-field">{{field.name}}: {{field.value}}</h3>
+        </ng-container>
+    </h3>
+</div>

@@ -1,0 +1,38 @@
+<mat-toolbar>
+    Performance Summary
+</mat-toolbar>
+
+<div class="container">
+
+    <div class="col-1">
+        <app-week-performance-cards></app-week-performance-cards>
+    </div>
+
+    <div class="col-2">
+
+        <div class="full-chart-container">
+            <h3 class="chart-title">
+                Appointments per Day, Previous Year
+            </h3>
+            <app-appointments-per-day></app-appointments-per-day>
+        </div>
+
+        <div class="half-chart-container">
+            <h3 class="chart-title">
+                Top Stores for {{ currentMonth }}
+            </h3>
+            <app-top-stores></app-top-stores>
+        </div>
+
+        <div class="half-chart-container">
+            <h3 class="chart-title">
+                Platform Adoption for February
+            </h3>
+            <app-scheduled-vs-unscheduled-chart></app-scheduled-vs-unscheduled-chart>
+        </div>
+
+    </div>
+
+</div>
+
+

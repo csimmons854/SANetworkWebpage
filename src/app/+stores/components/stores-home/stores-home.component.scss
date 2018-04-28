@@ -1,0 +1,39 @@
+.page-container {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-head {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.page-content {
+    display: flex;
+    width: 100%;
+}
+
+.stores-list {
+    width: 60%;
+    height: 100%;
+}
+
+.store-details {
+    width: calc(40% - 48px);
+    height: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.search-form-field {
+    width: 60%;
+}
+
+.result-count {
+    margin-left: 24px;
+    font-style: italic;
+    opacity: 0.7;
+}
+

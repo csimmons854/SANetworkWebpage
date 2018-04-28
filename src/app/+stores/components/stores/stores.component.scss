@@ -1,0 +1,39 @@
+.title {
+    text-align: center;
+}
+
+.create-store-btn-wrapper {
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #C6C6C6;
+    padding: 6px;
+    padding-left: 12px;
+    border-radius: 26px;
+}
+
+.create-store-btn, .edit-store-btn {
+    margin-left: 8px;
+
+    .mat-icon {
+        padding: 4px 0;
+        line-height: 8px;
+    }
+}
+
+.create-store-btn {
+    width: 30px;
+    height: 30px;
+    background-color: #5AAE50;
+}
+
+.edit-store-btn {
+    width: 32px;
+    height: 32px;
+    background-color: #424242;
+    .mat-icon {
+        padding: 4px; 
+    }
+}

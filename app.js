@@ -2,6 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const db = require('./db');
+const path = require('path');
 
 //Initialize our app variable
 const app = express();
@@ -19,6 +20,10 @@ app.use(bodyParser.json());
  We are telling express server public folder is the place to look for the static files
 */
 app.use(express.static(__dirname + '/dist'));
+
+app.get('*',(req,res) => {
+    res.sendFile(path.join(__dirname,'dist/index.html'));
+});
 
 app.use('/SANetwork',require('./controllers/SANetwork'));
 
